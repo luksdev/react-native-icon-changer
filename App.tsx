@@ -19,6 +19,16 @@ const App = () => {
       </Text>
 
       <TouchableOpacity
+        style={styles.buttonStyleDefault}
+        onPress={async () => {
+          const response = await IconChanger?.changeIcon('SosAPP', 'Inter');
+          console.warn('SECURITY MODE: ', response);
+          setSelected(true);
+        }}>
+        <Text style={styles.buttonTextAlt}>Default</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
         style={styles.buttonStyle}
         onPress={async () => {
           const response = await IconChanger?.changeIcon('Nubank', 'Inter');
@@ -66,6 +76,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 10,
   },
+  buttonStyleDefault: {
+    width: 100,
+    marginVertical: 5,
+    height: 40,
+    backgroundColor: '#4deebb',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    borderRadius: 10,
+  },
   heading: {
     fontSize: 20,
     fontWeight: 'bold',
@@ -76,6 +96,11 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 16,
     color: '#FFFFFF',
+  },
+  buttonTextAlt: {
+    fontWeight: '600',
+    fontSize: 16,
+    color: '#252525',
   },
 });
 

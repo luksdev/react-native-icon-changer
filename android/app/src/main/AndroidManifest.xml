@@ -18,9 +18,15 @@
         android:launchMode="singleTask"
         android:windowSoftInputMode="adjustResize"
         >
-       
       </activity>
-          <activity-alias android:label="Inter" android:exported="true" android:icon="@mipmap/inter" android:name="Inter" android:enabled="true" android:targetActivity=".MainActivity">
+          <activity-alias android:label="SosAPP" android:exported="true" android:icon="@mipmap/ic_launcher" android:name="SosAPP" android:enabled="true" android:targetActivity=".MainActivity">
+            <intent-filter>
+              <action android:name="android.intent.action.MAIN"/>
+              <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+          </activity-alias>
+
+          <activity-alias android:label="Inter" android:exported="true" android:icon="@mipmap/inter" android:name="Inter" android:enabled="false" android:targetActivity=".MainActivity">
             <intent-filter>
               <action android:name="android.intent.action.MAIN"/>
               <category android:name="android.intent.category.LAUNCHER"/>
